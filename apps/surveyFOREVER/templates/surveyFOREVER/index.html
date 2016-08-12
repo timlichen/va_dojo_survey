@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Survey Form</title>
+</head>
+<body>
+  <h1>Hi, take our survey. I'm lonely.</h1>
+  <form action="/process" method="Post">
+    {% csrf_token %}
+    <input type="text" name="name" placeholder="You put name">
+    <h3>Choose a favbev lol?!</h3>
+    <p>Manny's Pale Ale</p>
+    <input type="radio" value="Manny's Pale Ale" name="favbev">
+    <p>Port City</p>
+    <input type="radio" value="Port City" name="favbev">
+    <p>Blue Moon</p>
+    <input type="radio" value="Blue Moon" name="favbev">
+    <p>Water</p>
+    <input type="radio" value="Water" name="favbev">
+    <h3>How many languages do you speak</h3>
+    <p>English</p>
+    <input type="checkbox" value="english" name="favLang">
+    <p>Pig Latin</p>
+    <input type="checkbox" value="pig-latin" name="favLang">
+    <p>Esperanto</p>
+    <input type="checkbox" value="esperanto" name="favLang">
+    <p>Parsley-Tounge</p>
+    <input type="checkbox" value="parsley-tounge" name="favLang">
+    <input type="submit" value="submit">
+  </form>
+</body>
+</html>

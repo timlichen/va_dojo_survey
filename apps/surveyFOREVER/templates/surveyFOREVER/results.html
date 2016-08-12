@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Results</title>
+</head>
+<body>
+  <h1>Dojo stuff</h1>
+  <p>Name: {{request.session.stuff.name}}</p>
+  <p>Beer of choice: {{request.session.stuff.beverage}}</p>
+  <p>Languages I speak:</p>
+  <ul>
+  {% for lang in request.session.stuff.langArr %}
+    <li>{{lang}}</li>
+  {% endfor %}
+  </ul>
+</body>
+</html>
